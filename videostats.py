@@ -65,7 +65,7 @@ def get_video_data(video_ids):
     try:
         for batch in  batch_list(video_ids, maxResults):
             video_id_str = ",".join(batch)
-            base_url = f"https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&id={video_id_str}&maxResults=50&key={API_KEY}"
+            base_url = f"https://youtube.googleapis.com/youtube/v3/videos?part=contentDetails&part=snippet&part=statistics&id={video_id_str}&maxResults={maxResults}&key={API_KEY}"
 
             response = requests.get(base_url)
             response.raise_for_status()
