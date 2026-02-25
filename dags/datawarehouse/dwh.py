@@ -40,7 +40,7 @@ def staging_table():
                 insert_rows(cur, conn, schema, row)
 
             else:
-                if row["video_id"] in table_ids:
+                if row["videoid"] in table_ids:
                     update_rows(cur, conn, schema, row)
                 else:
                     insert_rows(cur, conn, schema, row)

@@ -87,7 +87,7 @@ def get_video_data(video_ids):
                 video_data = {
                     "videoid": video_id,
                     "title": snippet["title"],
-                    "publisedAt": snippet["publishedAt"],
+                    "publishedAt": snippet["publishedAt"],
                     "duration": contentDetails["duration"],
                     "viewCount": statistics.get("viewCount", None),
                     "likeCount": statistics.get("likeCount", None),
